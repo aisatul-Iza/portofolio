@@ -288,18 +288,27 @@ section { padding: 110px 0;}
 /* ==================== ABOUT ==================== */
 .about-grid {
     display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    gap: 55px;
-    align-items: center;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 65px;
+    align-items: start;
+}
+
+/* KOLOM FOTO DAN INFORMASI */
+.about-left {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding-top: 0;
+    align-self: start;
 }
 
 /* FOTO */
 .about-photo {
     position: relative;
     width: 100%;
-    max-width: 340px;
-    height: 380px;
-    margin: 0 auto;
+    max-width: 490px;
+    height: 460px;
+    margin: 0;
     padding: 9px;
     border-radius: 25px;
     background: var(--bg-soft);
@@ -320,11 +329,11 @@ section { padding: 110px 0;}
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .info-box {
-    padding: 14px;
+    padding: 15px;
     background: rgba(255, 255, 255, .7);
     border: 1px solid var(--border);
     border-radius: 15px;
@@ -342,61 +351,61 @@ section { padding: 110px 0;}
     color: var(--navy);
 }
 
-/* KONTEN */
+/* TEKS ABOUT */
 .about-content {
     width: 100%;
+    margin: 0;
+    padding: 0;
+    align-self: start;
 }
 
 .about-content p {
     text-align: justify;
-    text-align-last: left;
     color: var(--muted);
     line-height: 1.8;
-    margin-top: 0;
-    margin-bottom: 16px;
     font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-/* RESPONSIVE TABLET */
+/* TABLET */
 @media (max-width: 992px) {
     .about-grid {
-        grid-template-columns: 0.8fr 1.2fr;
-        gap: 30px;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 35px;
     }
 
     .about-photo {
-        max-width: 300px;
-        height: 340px;
+        height: 360px;
     }
 }
 
-/* RESPONSIVE MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
+    .about-left {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
     .about-photo {
-        max-width: 280px;
-        height: 320px;
+        height: 350px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: justify;
     }
 
     .about-info {
         gap: 10px;
     }
-
-    .info-box {
-        padding: 12px;
-    }
-
-    .about-content p {
-        font-size: 14px;
-        line-height: 1.75;
-        text-align: justify;
-    }
 }
-
 /* ==================== SKILLS ==================== */
 .skills-section,
 .timeline-section {
