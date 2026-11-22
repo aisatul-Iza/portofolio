@@ -644,6 +644,31 @@ section { padding: 110px 0;}
     color: var(--navy);
     gap: 11px;
 }
+
+.timeline-item:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 120px;
+    height: 90px;
+    border-top: 1.5px solid var(--blue);
+    border-right: 1.5px solid var(--blue);
+    border-bottom: 1.5px solid var(--blue);
+    z-index: -1;
+}
+.timeline-item:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 120px;
+    height: 90px;
+    border-top: 1.5px solid var(--blue);
+    border-left: 1.5px solid var(--blue);
+    border-bottom: 1.5px solid var(--blue);
+    z-index: -1;
+}
 /* ==================== CONTACT ==================== */
 .contact-card {
     position: relative;
@@ -819,6 +844,7 @@ footer { padding: 30px 0;}
     .timeline-content { padding: 22px; }
     .timeline-content h3 { font-size: 19px; }
     .timeline-content p { font-size: 13px; }
+    .timeline-item::after { display: none; }
     .contact-card { padding: 55px 25px; border-radius: 25px; }
     .footer-inner { flex-direction: column; text-align: center; }
 }
