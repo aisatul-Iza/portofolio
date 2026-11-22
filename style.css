@@ -387,7 +387,7 @@ section { padding: 110px 0;}
     border: 1px solid var(--border);
     border-radius: 20px;
     transition: .35s;
-    justify-content: center;
+    align-items: center;
 }
 .skill-card:hover {
     transform: translateY(-6px);
